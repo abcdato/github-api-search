@@ -1,0 +1,119 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 100px auto;
+  width: 660px;
+  background-color: #c4c4c4;
+}
+
+.form {
+  padding: 60px 0;
+  width: 500px;
+}
+
+.search__input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 500px;
+  height: 60px;
+  padding: 0 14px;
+  background-color: #ffffff;
+  font-size: 48px;
+  border-style: none;
+}
+
+.search__input:focus {
+  border-style: none;
+  outline: none;
+}
+
+.search__input::-webkit-input-placeholder {
+  color: #c4c4c4;
+}
+
+.search__input:-ms-input-placeholder {
+  color: #c4c4c4;
+}
+
+.search__input::-ms-input-placeholder {
+  color: #c4c4c4;
+}
+
+.search__input::placeholder {
+  color: #c4c4c4;
+}
+
+.search__list {
+  width: 500px;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.search__item {
+  background-color: #e3e3e3;
+  font-size: 30px;
+  border: 2px solid black;
+  padding-left: 14px;
+  cursor: pointer;
+}
+
+.search__item:hover {
+  background-color: #65cdf9;
+}
+
+.selected__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid black;
+  padding: 8px 16px;
+  width: 500px;
+  background-color: #e27beb;
+  font-size: 24px;
+}
+
+.selected__item:first-of-type {
+  margin-top: 45px;
+}
+
+.selected__item-text {
+  overflow: hidden;
+  max-width: 410px;
+}
+
+.close-btn {
+  width: 46px;
+  height: 42px;
+  border: none;
+  cursor: pointer;
+  background-image: url(../img/close.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
