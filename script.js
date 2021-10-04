@@ -17,7 +17,8 @@ async function getRepos(url) {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    const repos = await data.items;
+    const repos = data.items;
+    console.log(repos);
 
     clearSearchList();
 
@@ -35,7 +36,7 @@ async function autocomplete() {
     if (inputText !== '') {
       const repos = await getRepos(url);
 
-      repos.forEach((repo) => {
+      for (let repo of repos) {
         let searchItem = document.createElement('li');
 
         searchItem.classList.add('search__item');
@@ -46,7 +47,7 @@ async function autocomplete() {
           clearSearchList();
           addRepo(repo);
         });
-      });
+      }
     } else {
       clearSearchList();
     }
@@ -92,7 +93,9 @@ function addRepo(repo) {
 
 function clearSearchList() {
   const searchItems = document.querySelectorAll('.search__item');
-  searchItems.forEach((item) => item.remove());
+  for (let item of searchItems) {
+    item.remove();
+  }
 }
 
 input.addEventListener('input', debounce(autocomplete, 500));
