@@ -18,7 +18,6 @@ async function getRepos(url) {
     const response = await fetch(url);
     const data = await response.json();
     const repos = data.items;
-    console.log(repos);
 
     clearSearchList();
 
