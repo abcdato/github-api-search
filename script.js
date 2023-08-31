@@ -29,7 +29,7 @@ async function getRepos(url) {
 
 async function autocomplete() {
   const inputText = input.value.trim();
-  const url = `https://api.github.com/search/repositories?q=${inputText}:in:name&per_page=5&sort=stars&order=desc`;
+  const url = `https://api.github.com/search/repositories?q=${inputText}+in:name&per_page=5&sort=stars&order=desc`;
 
   try {
     if (inputText !== '') {
